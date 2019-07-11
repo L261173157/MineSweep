@@ -14,7 +14,8 @@
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
-using Microsoft.Practices.ServiceLocation;
+
+using CommonServiceLocator;
 
 namespace MineSweep.ViewModel
 {
@@ -43,6 +44,7 @@ namespace MineSweep.ViewModel
             ////}
 
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<SweepViewModel>();
         }
 
         public MainViewModel Main
@@ -52,7 +54,14 @@ namespace MineSweep.ViewModel
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
         }
-        
+        public SweepViewModel SweepView
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<SweepViewModel>();
+            }
+        }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels

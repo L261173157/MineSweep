@@ -16,7 +16,7 @@ namespace MineSweep.ViewModel
     {
         public SweepViewModel()
         {
-            sweepModel = new SweepModel() { Sweep = new int[5, 5] };
+            sweepModel = new SweepModel() { Sweep = new int[5, 5], SweepView = new int[5, 5], SweepView1D = new List<int>() };
         }
         #region 属性
         private SweepModel sweepModel;
@@ -32,6 +32,30 @@ namespace MineSweep.ViewModel
                 RaisePropertyChanged(nameof(SweepModel));
             }
         }
+        #endregion
+
+        #region 命令
+        private RelayCommand testCmd;
+        public RelayCommand TestCmd
+        {
+            get
+            {
+                if (testCmd == null)
+                    return new RelayCommand(Test);
+                return testCmd;
+            }
+            set
+            {
+                testCmd = value;
+            }
+        }
+        #endregion
+        #region 命令方法
+        private void Test()
+        {
+            sweepModel.SweepView1D = sweepModel.SweepView.Cast<int>().ToList();
+        }
+
         #endregion
     }
 }
