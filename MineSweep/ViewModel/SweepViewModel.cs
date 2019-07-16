@@ -50,6 +50,7 @@ namespace MineSweep.ViewModel
         #endregion
 
         #region 命令
+        //内部测试
         private RelayCommand testCmd;
         public RelayCommand TestCmd
         {
@@ -80,13 +81,13 @@ namespace MineSweep.ViewModel
             }
         }
         //点击命令
-        private RelayCommand<SweepViewParam> viewClick;
-        public RelayCommand<SweepViewParam> ViewClick
+        private RelayCommand<string> viewClick;
+        public RelayCommand<string> ViewClick
         {
             get
             {
                 if (viewClick == null)
-                    return new RelayCommand<SweepViewParam>(Click);
+                    return new RelayCommand<string>(Click);
                 return viewClick;
             }
             set
@@ -99,7 +100,7 @@ namespace MineSweep.ViewModel
         //用于界面测试的方法
         private void Test() 
         {
-            sweepModel.SweepView1D = sweepModel.Sweep.Cast<int>().ToList();
+            sweepModel.SweepView1D = sweepModel.SweepView.Cast<int>().ToList();
         }
         //重新生成地雷及界面
         private void Reset()
@@ -121,9 +122,9 @@ namespace MineSweep.ViewModel
             }
         }
         //点击界面按钮事件方法
-        private void Click(SweepViewParam param)
+        private void Click(string param)
         {
-            sweepViewParam = param;
+            string[] paramChar = param;
         }
 
         #endregion
