@@ -9,30 +9,30 @@
         Title="SweepView" Height="450" Width="800" DataContext="{Binding SweepView, Mode=OneWay, Source={StaticResource Locator}}">
     <Grid>
         <Button Content="{Binding SweepModel.SweepView1D[0]}" HorizontalAlignment="Left" Margin="122,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,0"/>
-        <Button Content="{Binding SweepModel.SweepView1D[1]}" HorizontalAlignment="Left" Margin="177,67,0,0" VerticalAlignment="Top" Width="50" Height="50" />
-        <Button Content="{Binding SweepModel.SweepView1D[2]}" HorizontalAlignment="Left" Margin="232,67,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[3]}" HorizontalAlignment="Left" Margin="287,67,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[4]}" HorizontalAlignment="Left" Margin="342,67,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[5]}" HorizontalAlignment="Left" Margin="122,122,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[6]}" HorizontalAlignment="Left" Margin="177,122,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[7]}" HorizontalAlignment="Left" Margin="232,122,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[8]}" HorizontalAlignment="Left" Margin="287,122,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[9]}" HorizontalAlignment="Left" Margin="342,122,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[10]}" HorizontalAlignment="Left" Margin="122,177,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[11]}" HorizontalAlignment="Left" Margin="177,177,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[12]}" HorizontalAlignment="Left" Margin="232,177,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[13]}" HorizontalAlignment="Left" Margin="287,177,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[14]}" HorizontalAlignment="Left" Margin="342,177,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[15]}" HorizontalAlignment="Left" Margin="122,232,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[16]}" HorizontalAlignment="Left" Margin="177,232,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[17]}" HorizontalAlignment="Left" Margin="232,232,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[18]}" HorizontalAlignment="Left" Margin="287,232,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[19]}" HorizontalAlignment="Left" Margin="342,232,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[20]}" HorizontalAlignment="Left" Margin="122,287,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[21]}" HorizontalAlignment="Left" Margin="177,287,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[22]}" HorizontalAlignment="Left" Margin="232,287,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[23]}" HorizontalAlignment="Left" Margin="287,287,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="{Binding SweepModel.SweepView1D[24]}" HorizontalAlignment="Left" Margin="342,287,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button Content="{Binding SweepModel.SweepView1D[1]}" HorizontalAlignment="Left" Margin="177,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,1" />
+        <Button Content="{Binding SweepModel.SweepView1D[2]}" HorizontalAlignment="Left" Margin="232,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,2"/>
+        <Button Content="{Binding SweepModel.SweepView1D[3]}" HorizontalAlignment="Left" Margin="287,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,3"/>
+        <Button Content="{Binding SweepModel.SweepView1D[4]}" HorizontalAlignment="Left" Margin="342,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,4"/>
+        <Button Content="{Binding SweepModel.SweepView1D[5]}" HorizontalAlignment="Left" Margin="122,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,0"/>
+        <Button Content="{Binding SweepModel.SweepView1D[6]}" HorizontalAlignment="Left" Margin="177,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,1"/>
+        <Button Content="{Binding SweepModel.SweepView1D[7]}" HorizontalAlignment="Left" Margin="232,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,2"/>
+        <Button Content="{Binding SweepModel.SweepView1D[8]}" HorizontalAlignment="Left" Margin="287,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,3"/>
+        <Button Content="{Binding SweepModel.SweepView1D[9]}" HorizontalAlignment="Left" Margin="342,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,4"/>
+        <Button Content="{Binding SweepModel.SweepView1D[10]}" HorizontalAlignment="Left" Margin="122,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,0"/>
+        <Button Content="{Binding SweepModel.SweepView1D[11]}" HorizontalAlignment="Left" Margin="177,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,1"/>
+        <Button Content="{Binding SweepModel.SweepView1D[12]}" HorizontalAlignment="Left" Margin="232,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,2"/>
+        <Button Content="{Binding SweepModel.SweepView1D[13]}" HorizontalAlignment="Left" Margin="287,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,3"/>
+        <Button Content="{Binding SweepModel.SweepView1D[14]}" HorizontalAlignment="Left" Margin="342,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,4"/>
+        <Button Content="{Binding SweepModel.SweepView1D[15]}" HorizontalAlignment="Left" Margin="122,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,0"/>
+        <Button Content="{Binding SweepModel.SweepView1D[16]}" HorizontalAlignment="Left" Margin="177,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,1"/>
+        <Button Content="{Binding SweepModel.SweepView1D[17]}" HorizontalAlignment="Left" Margin="232,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,2"/>
+        <Button Content="{Binding SweepModel.SweepView1D[18]}" HorizontalAlignment="Left" Margin="287,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,3"/>
+        <Button Content="{Binding SweepModel.SweepView1D[19]}" HorizontalAlignment="Left" Margin="342,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,4"/>
+        <Button Content="{Binding SweepModel.SweepView1D[20]}" HorizontalAlignment="Left" Margin="122,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,0"/>
+        <Button Content="{Binding SweepModel.SweepView1D[21]}" HorizontalAlignment="Left" Margin="177,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,1"/>
+        <Button Content="{Binding SweepModel.SweepView1D[22]}" HorizontalAlignment="Left" Margin="232,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,2"/>
+        <Button Content="{Binding SweepModel.SweepView1D[23]}" HorizontalAlignment="Left" Margin="287,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,3"/>
+        <Button Content="{Binding SweepModel.SweepView1D[24]}" HorizontalAlignment="Left" Margin="342,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,4"/>
         <Button Content="界面显示test" HorizontalAlignment="Left" Margin="534,144,0,0" VerticalAlignment="Top" Width="75" Command="{Binding TestCmd}"/>
         <Button Content="Reset" HorizontalAlignment="Left" Margin="534,177,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ResetCmd}"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="534,117,0,0" TextWrapping="Wrap" Text="{Binding SweepModel.SweepNumer}" VerticalAlignment="Top" Width="120"/>
