@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Messaging;
 
 namespace MineSweep.Model
 {
@@ -37,12 +38,51 @@ namespace MineSweep.Model
         /// </summary>
         public int SweepNumer { get => sweepNumer; set { sweepNumer = value; RaisePropertyChanged(() => SweepNumer); } }
 
+        private int sweepNumerRemain;
+        /// <summary>
+        /// 地雷未标记数量
+        /// </summary>
+        public int SweepNumerRemain { get => sweepNumerRemain; set { sweepNumerRemain = value; RaisePropertyChanged(() => SweepNumerRemain); } }
+
+        private int numRemain;
+        /// <summary>
+        /// 剩余未开数量
+        /// </summary>
+        public int NumRemain { get => numRemain; set { numRemain = value; RaisePropertyChanged(() => NumRemain); } }
+
         private int isWin;
+        private int isWinLast;
         /// <summary>
         /// 胜利(0未完成，1胜利，2失败)
         /// </summary>
-        public int Iswin { get => isWin; set { isWin = value; RaisePropertyChanged(() => Iswin); } }
+        public int Iswin
+        {
+            get
+            {
+                return isWin;
 
+            }
+            set
+            {
+                
+                isWin = value;
+                RaisePropertyChanged(() => Iswin);
+                if (value != isWinLast)
+                {
+                    ONiswinChanged?.Invoke();
+                }
+                isWinLast = value;
+
+            }
+        }
+
+        #endregion
+        #region 自定义事件
+        public delegate void WinChangedHandler();
+        /// <summary>
+        /// isWin改变时触发事件
+        /// </summary>
+        public event WinChangedHandler ONiswinChanged;
         #endregion
     }
     public class SweepViewParam

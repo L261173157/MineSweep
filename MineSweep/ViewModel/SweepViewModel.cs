@@ -10,15 +10,28 @@ using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Messaging;
 
 
+
 namespace MineSweep.ViewModel
 {
    public class SweepViewModel: ViewModelBase
     {
         public SweepViewModel()
         {
-            sweepModel = new SweepModel() { Sweep = new int[5, 5], SweepView = new int[5, 5], SweepView1D = new ObservableCollection<int?>(),SweepNumer=3 };
+            sweepModel = new SweepModel() { Sweep = new int[5, 5], SweepView = new int[5, 5], SweepView1D = new ObservableCollection<int?>(), SweepNumer = 5 };
             Reset();
+            sweepModel.ONiswinChanged += SweepModel_ONiswinChanged;
         }
+        #region 通知前台
+
+        private void SweepModel_ONiswinChanged()
+        {
+            if (sweepModel.Iswin == 2)
+                Messenger.Default.Send<string>("你踩雷了", "ShowWin");
+            if (sweepModel.Iswin == 1)
+                Messenger.Default.Send<string>("你胜利了", "ShowWin");
+        }
+
+        #endregion
         #region 属性
         private SweepModel sweepModel;
         public SweepModel SweepModel
@@ -66,7 +79,10 @@ namespace MineSweep.ViewModel
                 testCmd = value;
             }
         }
-        //重新生成
+        
+        /// <summary>
+        /// 游戏重启命令
+        /// </summary>
         private RelayCommand resetCmd;
         public RelayCommand ResetCmd
         {
@@ -81,14 +97,17 @@ namespace MineSweep.ViewModel
                 resetCmd = value;
             }
         }
-        //点击命令
+        
+        /// <summary>
+        /// 界面点击命令
+        /// </summary>
         private RelayCommand<string> viewClick;
         public RelayCommand<string> ViewClick
         {
             get
             {
                 if (viewClick == null)
-                    return new RelayCommand<string>(Click);
+                    return new RelayCommand<string>(Click, CanClick);
                 return viewClick;
             }
             set
@@ -96,9 +115,29 @@ namespace MineSweep.ViewModel
                 viewClick = value;
             }
         }
+        /// <summary>
+        /// 界面右击命令
+        /// </summary>
+        private RelayCommand<string> viewRightClick;
+        public RelayCommand<string> ViewRightClick
+        {
+            get
+            {
+                if (viewRightClick == null)
+                    return new RelayCommand<string>(RightClick, CanClick);
+                return viewRightClick;
+            }
+            set
+            {
+                viewRightClick = value;
+            }
+        }
+
         #endregion
         #region 命令方法
-        //用于界面测试的方法
+        /// <summary>
+        /// 测试方法
+        /// </summary>
         private void Test() 
         {
             
@@ -108,7 +147,10 @@ namespace MineSweep.ViewModel
                 sweepModel.SweepView1D.Add(item);
             }
         }
-        //重新生成地雷及界面
+
+        /// <summary>
+        /// 游戏重启方法
+        /// </summary>
         private void Reset()
         {
             Array.Clear(sweepModel.Sweep, 0, sweepModel.Sweep.Length);
@@ -140,10 +182,14 @@ namespace MineSweep.ViewModel
                     sweepModel.SweepView1D[j] = null;
                 }
             }
+
+            sweepModel.Iswin = 0;
+            sweepModel.NumRemain = 25-sweepModel.SweepNumer;
+            sweepModel.SweepNumerRemain = sweepModel.SweepNumer;
         }
-        
+
         /// <summary>
-        /// 扫雷按钮方法
+        /// 界面点击命令
         /// </summary>
         /// <param name="param">按钮参数（y,x） </param>
         private void Click(string param)
@@ -159,6 +205,7 @@ namespace MineSweep.ViewModel
                 if (sweepModel.Sweep[paramInt[0], paramInt[1]] == 1)
                 {
                     sweepModel.SweepView[paramInt[0], paramInt[1]] = 9;
+                    sweepModel.Iswin = 2;
                 }
                 else
                 {
@@ -193,6 +240,11 @@ namespace MineSweep.ViewModel
                     if ((paramInt[0]) + 1 < 5 && (paramInt[1] + 1) < 5)
                     {
                         sweepModel.SweepView[paramInt[0], paramInt[1]] += sweepModel.Sweep[paramInt[0] + 1, paramInt[1] + 1];
+                    }
+                    sweepModel.NumRemain--;
+                    if(sweepModel.NumRemain==0)
+                    {
+                        sweepModel.Iswin = 1;
                     }
                 }
                 if (sweepModel.SweepView[paramInt[0], paramInt[1]] == 0)
@@ -243,6 +295,45 @@ namespace MineSweep.ViewModel
             }
 
             sweepModel.SweepView1D[paramInt[0] * 5 + paramInt[1]] = sweepModel.SweepView[paramInt[0], paramInt[1]];
+
+        }
+        
+        /// <summary>
+        /// 是否可以点击
+        /// </summary>
+        /// <param name="arg"></param>
+        /// <returns></returns>
+        private bool CanClick(string arg)
+        {
+            string[] param = arg.Split(',');
+            int y= Convert.ToInt32(param[0]);
+            int x = Convert.ToInt32(param[1]);
+            if (sweepModel.Iswin == 0 && sweepModel.SweepView[y,x]==0)
+                return true;
+            else
+                return false;
+        }
+        /// <summary>
+        /// 界面右击方法
+        /// </summary>
+        /// <param name="param">按钮参数（y,x）</param>
+        private void RightClick(string arg)
+        {
+            string[] param = arg.Split(',');
+            int y = Convert.ToInt32(param[0]);
+            int x = Convert.ToInt32(param[1]);
+            if (sweepModel.SweepView1D[y * 5 + x] == null)
+            {
+                sweepModel.SweepView1D[y * 5 + x] = 11;
+                sweepModel.SweepNumerRemain --;
+            }
+                
+            else
+            {
+                sweepModel.SweepView1D[y * 5 + x] = null;
+                sweepModel.SweepNumerRemain++;
+            }
+               
 
         }
 

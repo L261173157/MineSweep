@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GalaSoft.MvvmLight.Messaging;
 
 namespace MineSweep.View
 {
@@ -22,6 +23,14 @@ namespace MineSweep.View
         public SweepView()
         {
             InitializeComponent();
+            Messenger.Default.Register<string>(this, "ShowWin", Showbox);
+        }
+
+        
+
+        private void Showbox(string obj)
+        {
+            MessageBox.Show(obj);
         }
     }
 }
