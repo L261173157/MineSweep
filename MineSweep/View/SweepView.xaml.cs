@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,11 @@ namespace MineSweep.View
     /// </summary>
     public partial class SweepView : Window
     {
+       
         public SweepView()
         {
             InitializeComponent();
+            
             Messenger.Default.Register<string>(this, "ShowWin", Showbox);
         }
 
@@ -31,6 +34,12 @@ namespace MineSweep.View
         private void Showbox(string obj)
         {
             MessageBox.Show(obj);
+        }        
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            OptionView optionView = new OptionView();
+            optionView.ShowDialog();
         }
     }
 }

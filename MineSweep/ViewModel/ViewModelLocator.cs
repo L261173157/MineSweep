@@ -43,17 +43,11 @@ namespace MineSweep.ViewModel
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
 
-            SimpleIoc.Default.Register<MainViewModel>();
+            
             SimpleIoc.Default.Register<SweepViewModel>();
         }
 
-        public MainViewModel Main
-        {
-            get
-            {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
-            }
-        }
+       
         public SweepViewModel SweepView
         {
             get
