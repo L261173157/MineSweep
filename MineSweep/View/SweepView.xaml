@@ -8,195 +8,204 @@
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         
         mc:Ignorable="d"
-        Title="扫雷" Height="450" Width="800" DataContext="{Binding SweepView, Mode=OneWay, Source={StaticResource Locator}}">
+        Title="扫雷" Height="450" Width="350" DataContext="{Binding SweepView, Mode=OneWay, Source={StaticResource Locator}}">
     <Grid>
-        <Button Content="{Binding SweepModel.SweepView1D[0]}" HorizontalAlignment="Left" Margin="46,113,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,0" >
+        <Button Content="{Binding SweepModel.SweepView1D[0]}" HorizontalAlignment="Left" Margin="34,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,0" >
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="0,0"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[1]}" HorizontalAlignment="Left" Margin="101,113,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,1" >
+        <Button Content="{Binding SweepModel.SweepView1D[1]}" HorizontalAlignment="Left" Margin="89,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,1" >
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="0,1"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[2]}" HorizontalAlignment="Left" Margin="156,113,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,2">
+        <Button Content="{Binding SweepModel.SweepView1D[2]}" HorizontalAlignment="Left" Margin="144,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,2">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="0,2"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[3]}" HorizontalAlignment="Left" Margin="211,113,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,3">
+        <Button Content="{Binding SweepModel.SweepView1D[3]}" HorizontalAlignment="Left" Margin="199,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,3">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="0,3"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[4]}" HorizontalAlignment="Left" Margin="266,113,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,4">
+        <Button Content="{Binding SweepModel.SweepView1D[4]}" HorizontalAlignment="Left" Margin="254,67,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="0,4">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="0,4"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[5]}" HorizontalAlignment="Left" Margin="46,168,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,0">
+        <Button Content="{Binding SweepModel.SweepView1D[5]}" HorizontalAlignment="Left" Margin="34,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,0">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="1,0"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[6]}" HorizontalAlignment="Left" Margin="101,168,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,1">
+        <Button Content="{Binding SweepModel.SweepView1D[6]}" HorizontalAlignment="Left" Margin="89,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,1">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="1,1"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[7]}" HorizontalAlignment="Left" Margin="156,168,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,2">
+        <Button Content="{Binding SweepModel.SweepView1D[7]}" HorizontalAlignment="Left" Margin="144,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,2">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="1,2"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[8]}" HorizontalAlignment="Left" Margin="211,168,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,3">
+        <Button Content="{Binding SweepModel.SweepView1D[8]}" HorizontalAlignment="Left" Margin="199,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,3">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="1,3"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[9]}" HorizontalAlignment="Left" Margin="266,168,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,4">
+        <Button Content="{Binding SweepModel.SweepView1D[9]}" HorizontalAlignment="Left" Margin="254,122,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="1,4">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="1,4"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[10]}" HorizontalAlignment="Left" Margin="46,223,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,0">
+        <Button Content="{Binding SweepModel.SweepView1D[10]}" HorizontalAlignment="Left" Margin="34,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,0">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,0"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[11]}" HorizontalAlignment="Left" Margin="101,223,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,1">
+        <Button Content="{Binding SweepModel.SweepView1D[11]}" HorizontalAlignment="Left" Margin="89,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,1">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,1"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[12]}" HorizontalAlignment="Left" Margin="156,223,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,2">
+        <Button Content="{Binding SweepModel.SweepView1D[12]}" HorizontalAlignment="Left" Margin="144,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,2">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,2"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[13]}" HorizontalAlignment="Left" Margin="211,223,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,3">
+        <Button Content="{Binding SweepModel.SweepView1D[13]}" HorizontalAlignment="Left" Margin="199,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,3">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,3"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[14]}" HorizontalAlignment="Left" Margin="266,223,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,4">
+        <Button Content="{Binding SweepModel.SweepView1D[14]}" HorizontalAlignment="Left" Margin="254,177,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="2,4">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,4"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[15]}" HorizontalAlignment="Left" Margin="46,278,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,0">
+        <Button Content="{Binding SweepModel.SweepView1D[15]}" HorizontalAlignment="Left" Margin="34,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,0">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="3,0"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[16]}" HorizontalAlignment="Left" Margin="101,278,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,1">
+        <Button Content="{Binding SweepModel.SweepView1D[16]}" HorizontalAlignment="Left" Margin="89,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,1">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="3,1"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[17]}" HorizontalAlignment="Left" Margin="156,278,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,2">
+        <Button Content="{Binding SweepModel.SweepView1D[17]}" HorizontalAlignment="Left" Margin="144,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,2">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="3,2"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[18]}" HorizontalAlignment="Left" Margin="211,278,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,3">
+        <Button Content="{Binding SweepModel.SweepView1D[18]}" HorizontalAlignment="Left" Margin="199,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,3">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="3,3"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[19]}" HorizontalAlignment="Left" Margin="266,278,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,4">
+        <Button Content="{Binding SweepModel.SweepView1D[19]}" HorizontalAlignment="Left" Margin="254,232,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="3,4">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="3,4"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[20]}" HorizontalAlignment="Left" Margin="46,333,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,0">
+        <Button Content="{Binding SweepModel.SweepView1D[20]}" HorizontalAlignment="Left" Margin="34,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,0">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="4,0"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[21]}" HorizontalAlignment="Left" Margin="101,333,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,1">
+        <Button Content="{Binding SweepModel.SweepView1D[21]}" HorizontalAlignment="Left" Margin="89,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,1">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="4,1"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[22]}" HorizontalAlignment="Left" Margin="156,333,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,2">
+        <Button Content="{Binding SweepModel.SweepView1D[22]}" HorizontalAlignment="Left" Margin="144,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,2">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="4,2"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[23]}" HorizontalAlignment="Left" Margin="211,333,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,3">
+        <Button Content="{Binding SweepModel.SweepView1D[23]}" HorizontalAlignment="Left" Margin="199,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,3">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="4,3"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="{Binding SweepModel.SweepView1D[24]}" HorizontalAlignment="Left" Margin="266,333,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,4">
+        <Button Content="{Binding SweepModel.SweepView1D[24]}" HorizontalAlignment="Left" Margin="254,287,0,0" VerticalAlignment="Top" Width="50" Height="50" Command="{Binding ViewClick}" CommandParameter="4,4">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="4,4"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="界面显示test" HorizontalAlignment="Left" Margin="534,287,0,0" VerticalAlignment="Top" Width="75" Command="{Binding TestCmd}"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="533,93,0,0" TextWrapping="Wrap" Text="{Binding SweepModel.SweepNumer}" VerticalAlignment="Top" Width="120"/>
-        <Label Content="地雷数量:" HorizontalAlignment="Left" Margin="454,91,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,2.462"/>
-        <Label Content="剩余数量:" HorizontalAlignment="Left" Margin="454,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,2.462"/>
-        <TextBlock HorizontalAlignment="Left" Margin="538,151,0,0" TextWrapping="Wrap" Text="{Binding SweepModel.SweepNumerRemain}" VerticalAlignment="Top"/>
+        <Button Content="界面显示test" HorizontalAlignment="Left" Margin="229,358,0,0" VerticalAlignment="Top" Width="75" Command="{Binding TestCmd}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseRightButtonDown">
+                    <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,2"></i:InvokeCommandAction>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,2"></i:InvokeCommandAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+                
+               
+        <Label Content="剩余数量:" HorizontalAlignment="Left" Margin="35,356,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,2.462"/>
+        <TextBlock HorizontalAlignment="Left" Margin="119,361,0,0" TextWrapping="Wrap" Text="{Binding SweepModel.SweepNumerRemain}" VerticalAlignment="Top"/>
         <Menu HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="792">
             <MenuItem Header="_Game" Height="35" Width="100">
                 <MenuItem Header="NewGame" HorizontalAlignment="Left" Height="35" Width="149" Command="{Binding ResetCmd}"/>
                 <MenuItem Header="Stat" HorizontalAlignment="Left" Height="35" Width="149"/>
                 <MenuItem Header="Option" HorizontalAlignment="Left" Height="35" Width="149" Click="MenuItem_Click"/>
                 <MenuItem Header="Exit" HorizontalAlignment="Left" Height="35" Width="149"/>
-                
+
             </MenuItem>
             <MenuItem Header="_Help" Height="35" Width="100">
                 <MenuItem Header="Help" HorizontalAlignment="Left" Height="35" Width="149"/>

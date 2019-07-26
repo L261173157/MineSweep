@@ -132,7 +132,23 @@ namespace MineSweep.ViewModel
                 viewRightClick = value;
             }
         }
-
+        /// <summary>
+        /// 界面左右双击命令
+        /// </summary>
+        private RelayCommand<string> viewDoubleClick;
+        public RelayCommand<string> ViewDoubleClick
+        {
+            get
+            {
+                if (viewRightClick == null)
+                    return new RelayCommand<string>(DoubleClick, CanClick);
+                return viewRightClick;
+            }
+            set
+            {
+                viewRightClick = value;
+            }
+        }
         #endregion
         #region 命令方法
         /// <summary>
@@ -336,6 +352,27 @@ namespace MineSweep.ViewModel
                
 
         }
+        /// <summary>
+        /// 界面左右双击方法
+        /// </summary>
+        /// <param name="param">按钮参数（y,x）</param>
+        private void DoubleClick(string arg)
+        {
+            string[] param = arg.Split(',');
+            int y = Convert.ToInt32(param[0]);
+            int x = Convert.ToInt32(param[1]);
+            if (sweepModel.SweepView1D[y * 5 + x] == null)
+            {
+                
+            }
+            else
+            {
+                
+            }
+
+
+        }
+
 
         #endregion
     }

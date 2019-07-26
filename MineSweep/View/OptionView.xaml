@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:MineSweep.View"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         mc:Ignorable="d"
-        Title="OptionView" Height="300" Width="450" DataContext="{Binding SweepView, Mode=OneWay, Source={StaticResource Locator}}">
-    
+        Title="OptionView" Height="300" Width="300" DataContext="{Binding SweepView, Mode=OneWay, Source={StaticResource Locator}}">
+
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="138,79,0,0" TextWrapping="Wrap" Text="{Binding SweepModel.SweepNumer}" VerticalAlignment="Top" Width="120"/>
-        <Label Content="地雷数量:" HorizontalAlignment="Left" Margin="54,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,2.462"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="123,68,0,0" TextWrapping="Wrap" Text="{Binding SweepModel.SweepNumer}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="地雷数量:" HorizontalAlignment="Left" Margin="39,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,2.462"/>
 
     </Grid>
 </Window>
