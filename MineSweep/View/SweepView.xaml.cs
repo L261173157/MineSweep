@@ -41,5 +41,12 @@ namespace MineSweep.View
             OptionView optionView = new OptionView();
             optionView.ShowDialog();
         }
+
+        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("双击");
+        }
+
+
     }
 }

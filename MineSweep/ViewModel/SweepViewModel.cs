@@ -363,7 +363,7 @@ namespace MineSweep.ViewModel
             int x = Convert.ToInt32(param[1]);
             if (sweepModel.SweepView1D[y * 5 + x] == null)
             {
-                
+                SweepModel_ONiswinChanged();
             }
             else
             {

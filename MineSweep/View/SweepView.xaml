@@ -185,13 +185,13 @@
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Content="界面显示test" HorizontalAlignment="Left" Margin="229,358,0,0" VerticalAlignment="Top" Width="75" Command="{Binding TestCmd}">
+        <Button Content="界面显示test" HorizontalAlignment="Left" Margin="229,358,0,0" VerticalAlignment="Top" Width="75" Command="{Binding TestCmd}" MouseDoubleClick="Button_MouseDoubleClick">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonDown">
                     <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,2"></i:InvokeCommandAction>
                 </i:EventTrigger>
                 <i:EventTrigger EventName="MouseDoubleClick">
-                    <i:InvokeCommandAction Command="{Binding ViewRightClick}" CommandParameter="2,2"></i:InvokeCommandAction>
+                    <i:InvokeCommandAction Command="{Binding ViewDoubleClick}" CommandParameter="2,2"></i:InvokeCommandAction>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
